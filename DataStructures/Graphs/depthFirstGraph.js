@@ -28,4 +28,4 @@ function RecursiveDepthFirstApproach(graph, source) {
   }
 }
 
-DepthFirstApproach(graph, 'a')
+RecursiveDepthFirstApproach(graph, 'a')
