@@ -1,0 +1,33 @@
+@import '../scss/colors.scss';
+@import '../scss/mixins.scss';
+
+.loader {
+  @include flexBox(column, space-around);
+  width: 100vw;
+  height: 100vh;
+  z-index: 3;
+  position: fixed;
+  background-color: $primaryLighter;
+
+  img {
+    height: 250px;
+    border-radius: 100%;
+
+    &.centered {
+      width: auto
+    }
+  }
+
+  .loaderMessage {
+    color: $dark;
+  }
+
+  &.dark {
+    background-color: $dark;
+  }
+
+  &.transparent {
+    background-color: transparent;
+
+  }
+}

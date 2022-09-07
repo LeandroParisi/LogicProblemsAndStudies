@@ -1,0 +1,166 @@
+@import './colors.scss';
+
+@mixin screen($media) {
+  @if $media == xs {
+    /* 
+            Device = Most of the Smartphones Mobiles (Portrait)
+            Screen = B/w 320px to 479px
+        */
+    @media (max-width: 480px) {
+      @content;
+    }
+  } @else if $media == min-sm {
+    /* 
+            Device = Low Resolution Tablets, Mobiles (Landscape)
+            Screen = B/w 481px to 767px
+        */
+    @media (min-width: 481px) {
+      @content;
+    }
+  } @else if $media == sm {
+    /* 
+            Device = Low Resolution Tablets, Mobiles (Landscape)
+            Screen = B/w 481px to 767px
+        */
+    @media (min-width: 481px) and (max-width: 767px) {
+      @content;
+    }
+  } @else if $media == max-sm {
+    /* 
+            Device = Low Resolution Tablets, Mobiles (Landscape)
+            Screen = B/w 481px to 767px
+        */
+    @media (max-width: 767px) {
+      @content;
+    }
+  } @else if $media == min-md {
+    /* 
+            Device = Tablets, Ipads (landscape)
+            Screen = B/w 768px to 1024px
+        */
+    @media (min-width: 768px) {
+      @content;
+    }
+  } @else if $media == md {
+    /* 
+            Device = Tablets, Ipads (landscape)
+            Screen = B/w 768px to 1024px
+        */
+    @media (min-width: 768px) and (max-width: 1024px) {
+      @content;
+    }
+  } @else if $media == max-md {
+    /* 
+            Device = Tablets, Ipads (landscape)
+            Screen = B/w 768px to 1024px
+        */
+    @media (max-width: 1024px) {
+      @content;
+    }
+  } @else if $media == min-lg {
+    /* 
+            Device = Laptops, Desktops
+            Screen = B/w 1025px to 1280px
+        */
+
+    @media (min-width: 1025px) {
+      @content;
+    }
+  } @else if $media == lg {
+    /* 
+            Device = Laptops, Desktops
+            Screen = B/w 1025px to 1280px
+        */
+
+    @media (min-width: 1025px) and (max-width: 1280px) {
+      @content;
+    }
+  } @else if $media == max-lg {
+    /* 
+            Device = Laptops, Desktops
+            Screen = B/w 1025px to 1280px
+        */
+
+    @media (max-width: 1280px) {
+      @content;
+    }
+  } @else if $media == xl {
+    /*
+            Device = Desktops
+            Screen = 1281px to higher resolution desktops
+        */
+    @media (min-width: 1281px) {
+      @content;
+    }
+  } @else if $media == xxl {
+    @media (min-width: 1500px) {
+      @content;
+    }
+  }
+
+}
+
+@mixin flexBox($direction: row, $justify: center, $align: center, $wrap: wrap) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+  flex-wrap: $wrap;
+}
+
+@mixin textShadow($color: $dark2, $size: 1px, $blur: 3px) {
+  text-shadow: $size $size $blur $color;
+  transition: 0.7s;
+}
+
+@mixin boxShadow($size: 3px, $blur: 3px, $color: $dark-transparent) {
+  box-shadow: $color $size $size $blur;
+  transition: .3s;
+}
+
+@mixin dashboardColors() {
+  &.placed {
+    border: 1px solid $placed
+  };
+  
+  // &.toDo {
+  //   background-color: $toDo;
+  // };
+  
+  &.inProduction {
+    border: 1px solid $inProduction
+
+  };
+  
+  // &.readyToDeliver {
+  //   background-color: $readyToDeliver;
+  // };
+  
+  &.dispatched {
+    border: 1px solid $dispatched
+
+  };
+}
+
+@mixin dashboardHeaderColors() {
+  &.placed {
+    background-color: $placed;
+  };
+  
+  // &.toDo {
+  //   background-color: $toDo;
+  // };
+  
+  &.inProduction {
+    background-color: $inProduction;
+
+  };
+  
+  // &.readyToDeliver {
+  //   background-color: $readyToDeliver;
+  // };
+  
+  &.dispatched {
+    background-color: $dispatched;
+  };
+}

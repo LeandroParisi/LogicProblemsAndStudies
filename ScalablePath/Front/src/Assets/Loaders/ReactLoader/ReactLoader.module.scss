@@ -1,0 +1,7 @@
+@import '../../scss/colors.scss';
+@import '../../scss/mixins.scss';
+
+.loaderContainer {
+  @include flexBox();
+  width: 100%;
+}

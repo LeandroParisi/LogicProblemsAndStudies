@@ -1,0 +1,41 @@
+@import '../../../assets/scss/colors.scss';
+@import '../../../assets/scss/mixins.scss';
+@import '../../../assets/scss/fonts.scss';
+
+$padding: 15px;
+
+.modalContainer {
+  @include flexBox(column);
+  position: fixed;
+  top: 5vh;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+}
+
+.subContainer {
+  @include flexBox(column);
+  width: calc(80vw - #{$padding * 2});
+  height: calc(80vh - #{$padding * 2});
+  background-color: $dark;
+  z-index: 2;
+  position: relative;
+  // top: 15vh;
+  // left: 10vw;
+  border-radius: 15px;
+  padding: $padding;
+  color: white;
+
+  > .closeButton {
+    position: absolute;
+    right: 25px;
+    top: 6px;
+    background-color: transparent;
+    box-shadow: none;
+
+    &:hover {
+      box-shadow: none;
+    }
+  }
+}
+

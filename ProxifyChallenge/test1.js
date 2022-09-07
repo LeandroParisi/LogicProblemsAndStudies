@@ -1,5 +1,3 @@
-
-
 function solution2(s) {
   let counter = 0
 

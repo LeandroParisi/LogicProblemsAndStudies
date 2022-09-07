@@ -1,0 +1,48 @@
+@import './fonts.scss';
+@import './colors.scss';
+@import './mixins.scss';
+
+* {
+  font-family: monospace;
+  font-size: $font-med;
+
+  &::-webkit-scrollbar {
+    width: 12px;
+  }
+
+  &::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px $primary3; 
+    border-radius: 10px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    box-shadow: inset 0 0 6px $primary3; 
+  }
+}
+
+p {
+  font-size: $font-small;
+}
+
+p, h1, h2, h3, h4, h5, ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+input {
+  /* Chrome, Safari, Edge, Opera */
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  /* Firefox */
+  &[type=number] {
+    -moz-appearance: textfield;
+  }
+}
+input:focus {
+  outline: none;
+}

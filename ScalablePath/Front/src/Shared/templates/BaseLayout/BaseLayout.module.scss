@@ -1,0 +1,17 @@
+@import '../../../assets/scss/colors.scss';
+@import '../../../assets/scss/mixins.scss';
+@import '../../../assets/scss/fonts.scss';
+@import '../../../assets/scss/globals.module.scss';
+
+.baseLayoutContainer {
+  position: relative;
+
+  > [class*='overlay'] {
+    z-index: 2;
+  }
+}
+
+.baseLayout {
+  margin-top: $header-height;
+}
+

@@ -1,0 +1,29 @@
+@import '../scss/mixins.scss';
+
+.iconContainer {
+  @include flexBox(column);
+  position: relative;
+  width: fit-content;
+  padding: 8px;
+
+  &.default {
+    @include boxShadow(1px, 3px);
+    background-color: $primary3;
+    border-radius: 100%;
+    min-width: 15px;
+    cursor: pointer;
+
+    &:hover {
+      @include boxShadow(3px, 5px)
+    }
+  }
+
+  &.clickable {
+    cursor: pointer
+  }
+
+  &.disabled {
+    opacity: 50%;
+    cursor: initial;
+  }
+}
