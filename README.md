@@ -1,1 +1,1 @@
-# HackersRankChallenges
+# LogicProblemsAndStudies
