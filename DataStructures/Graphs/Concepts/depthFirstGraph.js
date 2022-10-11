@@ -9,16 +9,16 @@ const graph = {
   f: []
 }
 
-function DepthFirstApproach(graph, source) {
-  const stack = [source]
+// function DepthFirstApproach(graph, source) {
+//   const stack = [source]
 
-  while (!!stack.length) {
-    const current = stack.pop()
-    console.log(current)
-    const neiboughrs = graph[current]
-    stack.push(...neiboughrs)
-  }
-}
+//   while (!!stack.length) {
+//     const current = stack.pop()
+//     console.log(current)
+//     const neiboughrs = graph[current]
+//     stack.push(...neiboughrs)
+//   }
+// }
 
 function RecursiveDepthFirstApproach(graph, source) {
   console.log(source)
