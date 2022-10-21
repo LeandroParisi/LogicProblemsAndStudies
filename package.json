@@ -1,0 +1,27 @@
+{
+  "name": "logicproblemsandstudies",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "start": "ts-node src/index.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LeandroParisi/LogicProblemsAndStudies.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LeandroParisi/LogicProblemsAndStudies/issues"
+  },
+  "homepage": "https://github.com/LeandroParisi/LogicProblemsAndStudies#readme",
+  "devDependencies": {
+    "typescript": "^4.8.4"
+  }
+}
