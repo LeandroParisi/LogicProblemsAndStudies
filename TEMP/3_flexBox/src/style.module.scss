@@ -1,0 +1,115 @@
+@import "./mixins.scss";
+@import "./reset.scss";
+
+// --- START: This code could be organized on a separate file, but for IDE intelisence purposes I left it here
+.fullWidth {
+  width: 100%;
+}
+
+.twoThridsWidth {
+  width: 66%;
+}
+
+.oneThridsWidth {
+  width: 33%;
+}
+
+.basePadding {
+  padding: 10px;
+}
+
+.baseTextStyle {
+  text-align: center;
+  font-weight: bold;
+}
+
+$gridHeight: 10%;
+
+// --- END
+
+$mainGridHeight: $gridHeight * 6;
+
+$spaceBetweenSections: 2%;
+
+.body {
+  height: 100vh;
+  width: 100vw;
+  margin: auto;
+
+  .header {
+    background-color: aqua;
+    min-height: calc(1 * #{$gridHeight} - 20px);
+    @extend .fullWidth;
+    @include flexBox();
+  }
+
+  .main {
+    @include flexBox(row, space-between);
+    @extend .fullWidth;
+    height: calc(#{$mainGridHeight} - 2 * #{$spaceBetweenSections});
+    width: 100%;
+    margin: $spaceBetweenSections 0;
+
+    .sideBar {
+      @include flexBox(column, space-between);
+      @extend .oneThridsWidth;
+      height: 100%;
+
+      .heroImage {
+        background-color: plum;
+        width: 100%;
+        height: calc(100% * 0.4 - #{$spaceBetweenSections});
+      }
+
+      .sideMenu {
+        background-color: lightgreen;
+        height: calc(100% * 0.6 - #{$spaceBetweenSections});
+        width: 100%;
+      }
+    }
+
+    .mainSection {
+      @extend .twoThridsWidth;
+      @include flexBox(column, space-between);
+      height: 100%;
+
+      .mainContext {
+        background-color: lightyellow;
+        height: calc(100% * 0.7 - #{$spaceBetweenSections});
+        width: 100%;
+      }
+      .extraContent {
+        background-color: lightgray;
+        height: calc(100% * 0.3 - #{$spaceBetweenSections});
+        width: 100%;
+      }
+    }
+  }
+
+  .relatedContent {
+    @extend .fullWidth;
+    height: calc(#{$gridHeight} * 2);
+    width: 100%;
+    @include flexBox(row, space-between);
+
+    .relatedImages {
+      background-color: darkcyan;
+      height: 100%;
+      @extend .twoThridsWidth;
+    }
+    .relatedPosts {
+      background-color: lightpink;
+      height: 100%;
+      @extend .oneThridsWidth;
+    }
+  }
+
+  .footerContent {
+    height: $gridHeight;
+
+    @extend .fullWidth;
+
+    margin-top: 10px;
+    background-color: orange;
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "name": "@stockly/entry-tests-LeandroParisi",
+  "version": "1.0.0",
+  "description": "Stockly Entry Tests for LeandroParisi",
+  "scripts": {
+    "hack": "jest --config ./jest.config.js",
+    "start": "jest --config ./jest.config.js \\\\d-[A-Za-z0-9_.-]*\\\\.validation\\\\.js",
+    "validate": "jest --config ./jest.config.js",
+    "unhack": "bash wake-up-neo.sh"
+  },
+  "keywords": [
+    "stockly",
+    "entry-tests",
+    "$LeandroParisi"
+  ],
+  "author": "Stockly <contact@stockly.ai> (https://stockly.ai)",
+  "private": true,
+  "license": "ISC",
+  "dependencies": {
+    "jest": "23.6.0"
+  }
+}

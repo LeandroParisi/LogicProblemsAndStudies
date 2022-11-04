@@ -1,0 +1,28 @@
+@import "./mixins.scss";
+
+$font-small: 12px;
+
+.baseTextStyle {
+  text-align: center;
+  font-weight: bold;
+}
+
+* {
+  @extend .baseTextStyle;
+  font-family: monospace;
+  margin: 0;
+  padding: 0;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+}
+
+p {
+  font-size: $font-small;
+}
+
+// I know this code is not perfect, but it was done to force centering text vertically and horizontally in a fast way
+.body *:not(p) {
+  @include flexBox();
+}
