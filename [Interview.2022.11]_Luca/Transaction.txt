@@ -1,0 +1,15 @@
+A transaction is a unit of work that you want to treat as "a whole." It has to either happen in full or not at all.
+
+A classical example is transferring money from one bank account to another. To do that you have first to withdraw the amount from the source account, and then deposit it to the destination account. The operation has to succeed in full. If you stop halfway, the money will be lost, and that is Very Bad.
+
+In modern databases transactions also do some other things - like ensure that you can't access data that another person has written halfway. But the basic idea is the same - transactions are there to ensure, that no matter what happens, the data you work with will be in a sensible state. They guarantee that there will NOT be a situation where money is withdrawn from one account, but not deposited to another.
+
+A transaction is a way of representing a state change. Transactions ideally have four properties, commonly known as ACID:
+
+Atomic (if the change is committed, it happens in one fell swoop; you can never see "half a change")
+
+Consistent (the change can only happen if the new state of the system will be valid; any attempt to commit an invalid change will fail, leaving the system in its previous valid state)
+
+Isolated (no-one else sees any part of the transaction until it's committed)
+
+Durable (once the change has happened - if the system says the transaction has been committed, the client doesn't need to worry about "flushing" the system to make the change "stick")
